@@ -1,0 +1,42 @@
+load --os $HOME/myexpos/stage24/os_startup.xsm
+load --init $HOME/myexpos/stage24/init.xsm
+load --exhandler $HOME/myexpos/stage24/exception.xsm
+load --int=10 $HOME/myexpos/stage24/exit.xsm
+load --int=7 $HOME/myexpos/stage24/int7.xsm
+load --int=4 $HOME/myexpos/stage24/int4.xsm
+load --int=11 $HOME/myexpos/stage24/int11.xsm
+load --int=15 $HOME/myexpos/stage24/int15.xsm
+load --int=14 $HOME/myexpos/stage24/int14.xsm
+load --int=13 $HOME/myexpos/stage24/int13.xsm
+load --int=8 $HOME/myexpos/stage24/int8.xsm
+load --int=9 $HOME/myexpos/stage24/int9.xsm
+load --int=5 $HOME/myexpos/stage24/int5.xsm
+load --int=6 $HOME/myexpos/stage24/int6.xsm
+load --idle $HOME/myexpos/stage24/idle.xsm
+load --module 7 $HOME/myexpos/stage24/mod7.xsm
+load --module 0 $HOME/myexpos/stage24/mod0.xsm
+load --module 1 $HOME/myexpos/stage24/mod1.xsm
+load --module 2 $HOME/myexpos/stage24/mod2.xsm
+load --module 3 $HOME/myexpos/stage24/mod3.xsm
+load --module 4 $HOME/myexpos/stage24/mod4.xsm
+load --module 5 $HOME/myexpos/stage24/mod5.xsm
+load --int=console $HOME/myexpos/stage24/console.xsm
+load --int=disk $HOME/myexpos/stage24/disk.xsm
+load --int=timer $HOME/myexpos/stage24/timer.xsm
+load --exec $HOME/myexpos/stage24/odd.xsm
+load --exec $HOME/myexpos/stage24/list.xsm
+load --exec $HOME/myexpos/stage24/user.xsm
+load --exec $HOME/myexpos/stage24/ms1.xsm
+load --exec $HOME/myexpos/stage24/ms2.xsm
+load --exec $HOME/myexpos/stage24/pid.xsm
+load --exec $HOME/myexpos/stage24/parent.xsm
+load --exec $HOME/myexpos/stage24/pid.xsm
+load --exec $HOME/myexpos/stage24/child.xsm
+load --exec $HOME/myexpos/stage24/test4.xsm
+load --exec $HOME/myexpos/stage24/test5.xsm
+load --exec $HOME/myexpos/stage24/both.xsm
+load --exec $HOME/myexpos/stage24/create.xsm
+load --exec $HOME/myexpos/stage24/delete.xsm
+load --library $HOME/myexpos/expl/library.lib
+exit  
+

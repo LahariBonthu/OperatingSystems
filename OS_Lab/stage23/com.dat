@@ -1,0 +1,39 @@
+load --os $HOME/myexpos/stage23/os_startup.xsm
+load --init $HOME/myexpos/stage23/init.xsm
+load --exhandler $HOME/myexpos/stage23/exception.xsm
+load --int=10 $HOME/myexpos/stage23/exit.xsm
+load --int=7 $HOME/myexpos/stage23/int7.xsm
+load --int=4 $HOME/myexpos/stage23/int4.xsm
+load --int=11 $HOME/myexpos/stage23/int11.xsm
+load --int=15 $HOME/myexpos/stage23/int15.xsm
+load --int=14 $HOME/myexpos/stage23/int14.xsm
+load --int=13 $HOME/myexpos/stage23/int13.xsm
+load --int=8 $HOME/myexpos/stage23/int8.xsm
+load --int=9 $HOME/myexpos/stage23/int9.xsm
+load --int=6 $HOME/myexpos/stage23/int6.xsm
+load --idle $HOME/myexpos/stage23/idle.xsm
+load --module 7 $HOME/myexpos/stage23/mod7.xsm
+load --module 0 $HOME/myexpos/stage23/mod0.xsm
+load --module 1 $HOME/myexpos/stage23/mod1.xsm
+load --module 2 $HOME/myexpos/stage23/mod2.xsm
+load --module 4 $HOME/myexpos/stage23/mod4.xsm
+load --module 5 $HOME/myexpos/stage23/mod5.xsm
+load --int=console $HOME/myexpos/stage23/console.xsm
+load --int=disk $HOME/myexpos/stage23/disk.xsm
+load --int=timer $HOME/myexpos/stage23/timer.xsm
+load --exec $HOME/myexpos/stage23/odd.xsm
+load --exec $HOME/myexpos/stage23/list.xsm
+load --exec $HOME/myexpos/stage23/user.xsm
+load --exec $HOME/myexpos/stage23/ms1.xsm
+load --exec $HOME/myexpos/stage23/ms2.xsm
+load --exec $HOME/myexpos/stage23/pid.xsm
+load --exec $HOME/myexpos/stage23/parent.xsm
+load --exec $HOME/myexpos/stage23/pid.xsm
+load --exec $HOME/myexpos/stage23/child.xsm
+load --exec $HOME/myexpos/stage23/test4.xsm
+load --exec $HOME/myexpos/stage23/both.xsm
+load --exec $HOME/myexpos/stage23/create.xsm
+load --exec $HOME/myexpos/stage23/delete.xsm
+load --library $HOME/myexpos/expl/library.lib
+exit
+

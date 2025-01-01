@@ -1,0 +1,24 @@
+load --os $HOME/myexpos/stage21/os_startup.xsm
+load --init $HOME/myexpos/stage21/init.xsm
+load --exhandler $HOME/myexpos/stage21/exception.xsm
+load --int=10 $HOME/myexpos/stage21/exit.xsm
+load --int=7 $HOME/myexpos/stage21/int7.xsm
+load --int=11 $HOME/myexpos/stage21/int11.xsm
+load --int=15 $HOME/myexpos/stage21/int15.xsm
+load --int=8 $HOME/myexpos/stage21/int8.xsm
+load --int=9 $HOME/myexpos/stage21/int9.xsm
+load --int=6 $HOME/myexpos/stage21/int6.xsm
+load --idle $HOME/myexpos/stage21/idle.xsm
+load --module 7 $HOME/myexpos/stage21/mod7.xsm
+load --module 0 $HOME/myexpos/stage21/mod0.xsm
+load --module 1 $HOME/myexpos/stage21/mod1.xsm
+load --module 2 $HOME/myexpos/stage21/mod2.xsm
+load --module 4 $HOME/myexpos/stage21/mod4.xsm
+load --module 5 $HOME/myexpos/stage21/mod5.xsm
+load --int=console $HOME/myexpos/stage21/console.xsm
+load --int=disk $HOME/myexpos/stage21/disk.xsm
+load --int=timer $HOME/myexpos/stage21/timer.xsm
+load --exec $HOME/myexpos/stage21/odd.xsm
+load --exec $HOME/myexpos/stage21/list.xsm
+load --library $HOME/myexpos/expl/library.lib
+exit

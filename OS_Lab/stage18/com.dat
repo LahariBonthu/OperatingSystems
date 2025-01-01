@@ -1,0 +1,21 @@
+load --os $HOME/myexpos/stage18/os_startup.xsm
+load --init $HOME/myexpos/stage18/init.xsm
+load --exhandler $HOME/myexpos/stage18/exception.xsm
+load --int=10 $HOME/myexpos/stage18/exit.xsm
+load --int=7 $HOME/myexpos/stage18/int7.xsm
+load --int=9 $HOME/myexpos/stage18/int9.xsm
+load --int=6 $HOME/myexpos/stage18/int6.xsm
+load --idle $HOME/myexpos/stage18/idle.xsm
+load --module 7 $HOME/myexpos/stage18/mod7.xsm
+load --module 0 $HOME/myexpos/stage18/mod0.xsm
+load --module 1 $HOME/myexpos/stage18/mod1.xsm
+load --module 2 $HOME/myexpos/stage18/mod2.xsm
+load --module 4 $HOME/myexpos/stage18/mod4.xsm
+load --module 5 $HOME/myexpos/stage18/mod5.xsm
+load --int=console $HOME/myexpos/stage18/console.xsm
+load --int=disk $HOME/myexpos/stage18/disk.xsm
+load --int=timer $HOME/myexpos/stage18/timer.xsm
+load --exec $HOME/myexpos/stage18/odd.xsm
+load --library $HOME/myexpos/expl/library.lib
+exit
+

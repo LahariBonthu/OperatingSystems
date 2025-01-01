@@ -1,0 +1,82 @@
+type
+Share
+{
+  int isempty;
+  int data;
+}
+endtype
+
+decl
+  Share head;
+enddecl
+
+int main()
+{
+decl
+  int temp, x, pidone, pidtwo, semid, iter, counter;
+enddecl
+
+begin
+  x = exposcall("Heapset");
+  semid = exposcall("Semget");  // Create a semaphore
+  head = exposcall("Alloc", 2);  // Allocate shared memory
+  head.isempty = 1;  // Initialize as empty
+
+  pidone = exposcall("Fork");  // Fork the first child
+
+  if (pidone == 0) then
+    // First child process reads odd numbers
+    while (1) do
+      temp = exposcall("SemLock", semid);
+      if (head.isempty == 0 and head.data % 2 == 1) then
+        x = head.data;
+        head.isempty = 1;  // Mark shared memory as empty
+        temp = exposcall("Write", -2, x);  // Write data to the console
+      endif;
+      temp = exposcall("SemUnLock", semid);
+
+      // Delay to prevent rapid polling
+      counter = 0;
+      while (counter < 50) do
+        counter = counter + 1;
+      endwhile;
+    endwhile;
+  else
+    pidtwo = exposcall("Fork");  // Fork the second child
+
+    if (pidtwo == 0) then
+      // Second child process reads even numbers
+      while (1) do
+        temp = exposcall("SemLock", semid);
+        if (head.isempty == 0 and head.data % 2 == 0) then
+          x = head.data;
+          head.isempty = 1;  // Mark shared memory as empty
+          temp = exposcall("Write", -2, x);  // Write data to the console
+        endif;
+        temp = exposcall("SemUnLock", semid);
+      endwhile;
+    else
+      // Parent process writes numbers (odd and even)
+      iter = 1;
+      while (iter <= 100) do
+        temp = exposcall("SemLock", semid);  // Lock the semaphore
+        if (head.isempty == 1) then
+          head.data = iter;  // Write data into shared memory
+          head.isempty = 0;  // Mark shared memory as full
+          iter = iter + 1;
+        endif;
+        temp = exposcall("SemUnLock", semid);  // Unlock the semaphore
+
+        // Small delay between writes
+        counter = 0;
+        while (counter < 50) do
+          counter = counter + 1;
+        endwhile;
+      endwhile;
+    endif;
+  endif;
+
+  temp = exposcall("Semrelease", semid);  // Release the semaphore after use
+  return 0;
+end
+

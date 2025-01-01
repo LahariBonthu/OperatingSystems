@@ -1,0 +1,28 @@
+// Define aliases
+alias counter R0;
+alias sum R1;
+alias limit R2;
+alias temp R3;
+
+// Initialize registers
+counter = 1;    // Initialize counter to 1
+sum = 0;        // Initialize sum to 0
+limit = 5;      // Set the limit to 5
+
+// Start of loop
+_L1:
+temp = counter;   // Copy counter to temp
+temp = temp * counter;   // temp = counter * counter (R0^2)
+temp = temp * counter;   // temp = temp * counter (R0^3)
+
+sum = sum + temp; // Add temp (R0^3) to sum
+
+counter = counter + 1; // Increment the counter
+
+if(counter <= limit) then
+  goto _L1;   // Repeat the loop
+endif;
+
+// Print the result
+print sum;    // Print the sum of cubes
+

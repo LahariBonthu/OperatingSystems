@@ -1,0 +1,16 @@
+# load --os $HOME/myexpos/stage16/os_startup.xsm
+# load --init $HOME/myexpos/stage16/init.xsm
+# load --exhandler $HOME/myexpos/stage16/exception.xsm
+# load --int=10 $HOME/myexpos/stage16/exit.xsm
+# load --int=timer $HOME/myexpos/stage16/timer.xsm
+# load --int=7 $HOME/myexpos/stage16/write.xsm
+# load --idle $HOME/myexpos/stage16/idle.xsm
+# load --module 7 $HOME/myexpos/stage16/mod7.xsm
+# load --module 0 $HOME/myexpos/stage16/mod0.xsm
+# load --module 4 $HOME/myexpos/stage16/mod4.xsm
+# load --module 5 $HOME/myexpos/stage16/mod5.xsm
+# load --int=6 $HOME/myexpos/stage16/read.xsm
+# load --int=console $HOME/myexpos/stage16/console.xsm
+# load --library $HOME/myexpos/expl/library.lib
+# exit
+
